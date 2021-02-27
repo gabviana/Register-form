@@ -5,36 +5,19 @@ export const notNumber = (string) => {
     }
 };
 
-export const validatePassword = (password, repeatedPass) => {
-    if (password !== repeatedPass) {
-        return ("that both passwords match")
-    }
-}
 
-/* export const validatePassword = (password, repeatedPassword) => {
-    if (password != repeatedPassword) {
-        return ("a valid password (passwords must match)")
-    }
-}
-
- //(password != repeatedPassword) ? console.log("passwords are not equal!") : console.log("ok, good")
-export const separatedSurname = (fullname) => {
-    console.log(fullname);
-    const fullName = fullname.split(' ')
-    console.log(fullName)
-    const firstName = fullName[0]
-    if (!firstName) {
-        return (
-            fullName[fullName.length - 1])
-    }
-}*/
-
-export const onlyNumber = (number) => {
-    {/*const regex = RegExp('/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/')*/}
-    if (number.length !== 9) {
-        return ("only 9 numbers");
+export const onlyNumber = (string) => {
+    const regex = RegExp("[0-9]");
+    if (!regex.test(string)) {
+        return ("only numbers");
     }
 };
+
+
+export const validatePassword = () => {
+    return ("the same password");
+}
+
 
 export const existSpecial = (string) => {
     const regex = RegExp("[@]");
@@ -43,13 +26,13 @@ export const existSpecial = (string) => {
     }
 };
 
-// ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$
 
 export const validateMaxLength = (string, maxLength) => {
     if (string.length > maxLength) {
         return (`a max of ${maxLength} characters`);
     }
 };
+
 
 export const validateMinLength = (string, minLength) => {
     if (string.length < minLength) {
@@ -69,16 +52,14 @@ export const checkFormErrors = (value, validators, options) => {
         } else if (validator === validateMinLength && options) {
             const error = validator(value, options.minLength)
             error && errors.push(error)
-        } else if (validator === validatePassword && options) {
-            const error = validator(value, options.repeatedPass)
-            error && errors.push(error)
-        }else {
+        } else {
             const error = validator(value)
             error && errors.push(error)
         }
     });
     return errors;
 }
+
 
 export const concatErrorString = (errors) => {
     let result = ''
@@ -92,6 +73,5 @@ export const concatErrorString = (errors) => {
             result += error
         }
     })
-
     return "This field may include " + result;
 }

@@ -8,18 +8,8 @@
   height: 100vh;
   position: fixed;
   filter: brightness(1.4);
+  text-align: center;
 }
-
-/*.Form {
-  background-image: url('https://images.unsplash.com/photo-1527606432722-8b1422ce77a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  filter: brightness(1.4);
-  font-family: "Raleway", sans-serif;
-}*/
 
 .Form h1 {
   line-height: 2.5rem;
@@ -30,8 +20,22 @@
 
 .Form p {
   line-height: 1.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: white;
+}
+
+.dis-button {
+  align-content: center;
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 50px;
+  width: 115px;
+  height: 40px;
+  color: rgb(150, 150, 150);
+  font-size: 1rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
 }
 
 .styles-button {
@@ -56,4 +60,9 @@
   color:rgb(8, 64, 78);
   width: 150px;
   height: 44px;
+}
+
+.res-success p {
+  margin-top: 20px;
+  font-size: 1rem;
 }
