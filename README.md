@@ -1,4 +1,4 @@
-# TalentY Register Form and Input Validation
+# Register Form and Input Validation
 
 This repository was created to develop a register form and front-end validation. No libraries used, all code and CSS is original.
 
